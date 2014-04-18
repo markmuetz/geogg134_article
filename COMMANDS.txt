@@ -1,0 +1,2 @@
+Clean all.
+rm *.aux *.blg *.pdf *.bcf *.log *.xml *.bbl
