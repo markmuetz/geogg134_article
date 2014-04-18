@@ -66,7 +66,8 @@
 % (If you are submitting to a journal other than jgrga,
 % substitute the initials of the journal for "jgrga" below.)
 
-\documentclass[draft,jgrga]{AGUTeX}
+%\documentclass[grl]{AGUTeX}
+\documentclass[draft,grl]{AGUTeX}
 
 % To create numbered lines:
 
@@ -74,8 +75,9 @@
 
 % To activate the commands, uncomment \usepackage{lineno} and \linenumbers*[1]command, below:
 
-%\usepackage{lineno}
-%\linenumbers*[1]
+\usepackage{mhchem}
+\usepackage{lineno}
+\linenumbers*[1]
 
 %  To add line numbers to lines with equations:
 %  \begin{linenomath*}
@@ -109,17 +111,16 @@
 %----------------------------------------------------------------------------------------
 
 % Author names in capital letters:
-\authorrunninghead{SMITH ET AL.}
-
+\authorrunninghead{BTTM8}
 %------------------------------------------------
 
 % Shorter version of title entered in capital letters:
-\titlerunninghead{SHORT TITLE}
+\titlerunninghead{CLIMATE SENSITIVITY USING HADAM3}
 
 %------------------------------------------------
 
 % Corresponding author mailing address and e-mail address:
-\authoraddr{Corresponding author: Jane Smith, Department of Geography, Ohio State University, Columbus, Ohio, USA. (j.smith@ohio.edu)}
+\authoraddr{Corresponding author: XXX, MSc Student, Department of Geography, UCL (XXX@ucl.ac.uk)}
 
 %----------------------------------------------------------------------------------------
 
@@ -129,7 +130,7 @@
 %	TITLE
 %----------------------------------------------------------------------------------------
 
-\title{Title of the article}
+\title{Analysis of Climate Sensitivity using HadAM3}
 
 %----------------------------------------------------------------------------------------
 %	AUTHORS AND AFFILIATIONS
@@ -139,13 +140,9 @@
 
 % \altaffilmark will produce footnote; matching \altaffiltext will appear at bottom of page.
 
-\authors{John Smith,\altaffilmark{1}
-James Smith,\altaffilmark{1,2}, and
-Jane Smith\altaffilmark{2}}
+\authors{Candidate Number: BTTM8\altaffilmark{1}}
 
-\altaffiltext{1}{Department of Hydrology and Water Resources, University of Arizona, Tucson, Arizona, USA.}
-
-\altaffiltext{2}{Department of Geography, Ohio State University, Columbus, Ohio, USA.}
+\altaffiltext{1}{Department of Geography, UCL}
 
 %----------------------------------------------------------------------------------------
 %	ABSTRACT
@@ -154,6 +151,8 @@ Jane Smith\altaffilmark{2}}
 % Do NOT include any \begin...\end commands within the body of the abstract.
 
 \begin{abstract}
+
+\ce{CO2} ipsum dolor sit amet, consectetur adipiscing elit. Sed vehicula metus sapien. Suspendisse pulvinar, felis ut hendrerit aliquet, dui nisi bibendum erat, fermentum mattis enim nibh id arcu. Vestibulum ultrices eros sed odio tincidunt bibendum. Pellentesque fermentum ante vel nulla commodo fermentum. Vestibulum in augue sit amet libero viverra accumsan eu at magna. Sed at ligula quis nibh pharetra facilisis non eu libero. Suspendisse non quam sit amet massa luctus interdum sit amet in purus. Integer id orci elit, vitae sollicitudin lectus.
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vehicula metus sapien. Suspendisse pulvinar, felis ut hendrerit aliquet, dui nisi bibendum erat, fermentum mattis enim nibh id arcu. Vestibulum ultrices eros sed odio tincidunt bibendum. Pellentesque fermentum ante vel nulla commodo fermentum. Vestibulum in augue sit amet libero viverra accumsan eu at magna. Sed at ligula quis nibh pharetra facilisis non eu libero. Suspendisse non quam sit amet massa luctus interdum sit amet in purus. Integer id orci elit, vitae sollicitudin lectus.
 
@@ -170,7 +169,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vehicula metus sapi
 
 \section{Introduction}
 
-Nam fermentum sapien at enim varius consectetur. Quisque lobortis imperdiet mauris, et accumsan libero vulputate vitae. Integer lacinia purus vel metus tempus suscipit. Curabitur ac sapien quis mauris euismod commodo. Sed pharetra sem elit. Fusce ultrices, mauris eu fermentum tempor, tellus sem ornare lectus, in convallis nunc urna id dolor. Donec convallis ligula vitae sem viverra fermentum. Mauris in ullamcorper erat. Donec ultrices tempus nibh quis vestibulum. This statement requires citation \citep{AtkinsonSloan}. This one is an in-text citation because the authors of \citet{ColtonKress1} are specifically mentioned.
+Nam fermentum sapien at enim varius consectetur. Quisque lobortis imperdiet mauris, et accumsan libero vulputate vitae. Integer lacinia purus vel metus tempus suscipit. Curabitur ac sapien quis mauris euismod commodo. Sed pharetra sem elit. Fusce ultrices, mauris eu fermentum tempor, tellus sem ornare lectus, in convallis nunc urna id dolor. Donec convallis ligula vitae sem viverra fermentum. Mauris in ullamcorper erat. Donec ultrices tempus nibh quis vestibulum. This statement requires citation \citep{bro1967}. This one is an in-text citation because the authors of \citet{Englemann1986} are specifically mentioned.
 
 Praesent volutpat, nibh in dignissim commodo, tellus justo consequat erat, vel consequat mi arcu vel lectus. Aliquam a tellus nec felis sagittis consequat. Quisque convallis imperdiet neque a tempor. Nulla non erat urna. Mauris vel lorem magna, tristique auctor ipsum. Aliquam pharetra eleifend massa. Donec porttitor sagittis luctus. Aliquam pretium luctus leo quis congue. Morbi vel felis mi. Suspendisse viverra tortor pretium orci lacinia eleifend. Phasellus aliquam, nunc eu cursus feugiat, erat odio porttitor libero, quis accumsan orci ipsum ut lorem. Vestibulum pharetra malesuada egestas. Sed non orci sit amet erat suscipit fringilla in et diam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nunc ut rhoncus nulla. Aenean porta rhoncus suscipit.
 
@@ -307,33 +306,25 @@ This work was partially supported by a grant from the Spanish Ministry of Scienc
 
 % AGU does not want a .bib or a .bbl file. Please copy in the contents of your .bbl file here.
 
-\begin{thebibliography}{}
-
+%\bibliographystyle{agufull08}
+%\bibliography{sample-bib-08}
+\begin{thebibliography}{2}
 \providecommand{\natexlab}[1]{#1}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi:\discretionary{}{}{}#1}\else
   \providecommand{\doi}{doi:\discretionary{}{}{}\begingroup
   \urlstyle{rm}\Url}\fi
 
-\bibitem[{\textit{Atkinson and Sloan}(1991)}]{AtkinsonSloan}
-Atkinson, K., and I.~Sloan (1991), The numerical solution of first-kind
-  logarithmic-kernel integral equations on smooth open arcs, \textit{Math.
-  Comp.}, \textit{56}(193), 119--139.
+\bibitem[{\textit{Brown}(1967)}]{bro1967}
+Brown, R. J.~E. (1967), Permafrost in {Canada}, \textit{Map 1246A}, Geol. Surv.
+  of Can., Ottawa, Ont.
 
-\bibitem[{\textit{Colton and Kress}(1983)}]{ColtonKress1}
-Colton, D., and R.~Kress (1983), \textit{Integral Equation Methods in
-  Scattering Theory}, John Wiley, New York.
-
-\bibitem[{\textit{Hsiao et~al.}(1991)\textit{Hsiao, Stephan, and
-  Wendland}}]{StephanHsiao}
-Hsiao, G.~C., E.~P. Stephan, and W.~L. Wendland (1991), On the {D}irichlet
-  problem in elasticity for a domain exterior to an arc, \textit{J. Comput.
-  Appl. Math.}, \textit{34}(1), 1--19.
-
-\bibitem[{\textit{Lu and Ando}(2012)}]{LuAndo}
-Lu, P., and M.~Ando (2012), Difference of scattering geometrical optics
-  components and line integrals of currents in modified edge representation,
-  \textit{Radio Sci.}, \textit{47},  RS3007, \doi{10.1029/2011RS004899}.
+\bibitem[{\textit{Englemann et~al.}(1986)\textit{Englemann, Perkins, Hagan, and
+  Haller}}]{Englemann1986}
+Englemann, R.~J., R.~W. Perkins, D.~I. Hagan, and W.~A. Haller (1986), Washout
+  coefficients for selected gases and particulates, paper presented at 59th
+  Annual Meeting, Air Pollut. Control Agency, San Francisco, Calif., 20--24
+  June.
 
 \end{thebibliography}
 
