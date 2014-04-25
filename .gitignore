@@ -3,5 +3,7 @@
 *.bbl
 *.blg
 *.pdf
+*-blx.bib
+*.run.xml
 
 .*.swp
