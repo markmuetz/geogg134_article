@@ -6,6 +6,7 @@
 \usepackage{graphicx}
 \usepackage{verbatim}
 \usepackage{mhchem}
+\usepackage{textcomp}
 
 % Reduces margins substantially.
 \usepackage{geometry}
@@ -53,7 +54,7 @@
 % WG1AR5_AnnexI_FINAL
 % WG1AR5_Chapter02_FINAL: Observations: Atmosphere and Surface
 % WG1AR5_Chapter06_FINAL: Carbon and Other Biogeochemical Cycles
-% WG1AR5_Chapter08_FINAL: Antrhopogenic and Natural Radiative Forcing
+% WG1AR5_Chapter08_FINAL: Anthropogenic and Natural Radiative Forcing
 % WG1AR5_Chapter09_FINAL: Evaluation of Climate Models
 % WG1AR5_Chapter14_FINAL: Climate Phenomena and their Relevance for Future Regional Climate Change
 % WG1AR5_SPM_FINAL
@@ -69,18 +70,18 @@
 
 \section*{Abstract}
 
-From an initial starting point of XXXppm of \ce{CO2}, HadAM3 is used to model three different scenarios: control, instantaneous doubling of \ce{CO2} and a 1\% rise in \ce{CO2} for 70 years. From these scenarios, the Transient Climate Response (TCR) and climate sensitivity to \ce{CO2} ($CS_{\ce{CO2}}$) are calculated, finding values of $TCR = \SI{2.04}{K}$ and $CS_{\ce{CO2}} = \SI{2.8}{W.m^{-2}.K^{-1}}$. The temperature differences across the globe between the control scenario and the 1\% rise scenario are analysed. The seasonal variation of precipitation and surface temperature over South America are discussed, and compared to the regional section of AR5 WGI IPCC (TODO: cite). The local changes over South America of the variables precipitation, surface temperature, Net Primary Productivity (NPP), humidity and soil moisture are analysed in detail. The interdependence of these variables is discussed, as well as looking into the reasons for this interdependence.
+From an initial starting point of \SI{346}{ppm} of \ce{CO2}, HadAM3 is used to model three different scenarios: control, instantaneous doubling of \ce{CO2} and a 1\% rise in \ce{CO2} for 70 years. From these scenarios, the Transient Climate Response (TCR) and climate sensitivity to \ce{CO2} ($CS_{\ce{CO2}}$) are calculated, finding values of $TCR = \SI{2.0}{K}$ and $CS_{\ce{CO2}} = \SI{2.9}{W.m^{-2}.K^{-1}}$. The temperature differences across the globe between the control scenario and the 1\% rise scenario are analysed. The seasonal variation of precipitation and surface temperature over South America are discussed, and compared to the regional section of IPCC AR5 WG I \parencite{ipcc2014wg1}. The local changes over South America of the variables precipitation, surface temperature, Net Primary Productivity (NPP), humidity and soil moisture are analysed in detail. The interdependence of these variables is discussed, as well as looking into the reasons for this interdependence.
 
 \section{Introduction}
 
 % Layout the groundwork for why studying CO2 is important:
-Since 1958 the level of \ce{CO2} in the atmosphere has been monitored at the Mauna Loa observatory in Hawaii (TODO: cite). Its current level now stands at \SI{401}{ppm} (April, 2014), having increased from a value of \SI{315}{ppm} since 1958, which was already over the maximum value of \ce{CO2} that the Earth had seen for the previous \SI{800 000}{years} (TODO: cite). It is a well mixed gas, so its value at on location is indicative of its value across the globe, although there are regional variations (TODO: cite). It is a Greenhouse Gas (GHG), meaning that it is mostly transparent to the short-wave radiation incident on the Earth from the Sun, but opaque to the outgoing long-wave radiation, which has the effect of heating up the Earth's surface (TODO: cite Neelin). It is ``very likely'' that it is responsible for the recent global rise in temperatures (TODO: cite: IPCC), which in turn are predicted to lead to increased intensity of tropical cyclones (TODO: cite), droughts (TODO: cite) and extreme precipitation events (TODO: cite). It is therefore of vital importance that its effect on the Earth's climate is studied, so as the consequences of releasing more \ce{CO2} into the atmosphere can be predicted without performing the actual experiment.
+Since 1958 the level of \ce{CO2} in the atmosphere has been monitored at the Mauna Loa observatory in Hawaii \parencite{keeling1976atmospheric}. Its current level now stands at \SI{401}{ppm} (April, 2014), having increased from a value of \SI{315}{ppm} since 1958, which was already over the maximum value of \ce{CO2} that the Earth had seen for the previous \SI{800 000}{years} \parencite{yin2012individual}. It is a well mixed gas, so its value at on location is indicative of its value across the globe, although there are regional variations \parencite{gurney2002towards}. It is a Greenhouse Gas (GHG), meaning that it is mostly transparent to the short-wave radiation incident on the Earth from the Sun, but opaque to the outgoing long-wave radiation, which has the effect of heating up the Earth's surface \parencite{neelin2011climate}. It is ``very likely'' that it is responsible for the recent global rise in temperatures \parencite{ipcc2014wg1}, which in turn are predicted to lead to increased intensity of tropical cyclones \parencite{knutson2010tropical}, droughts \parencite{dai2012increasing} and extreme precipitation events \parencite{shongwe2009projected}. It is therefore of vital importance that its effect on the Earth's climate is studied, so as the consequences of releasing more \ce{CO2} into the atmosphere can be predicted without performing the actual experiment.
 
 \subsection{General Circulation Models}
 % Explain GCMs.
-To study the release of \ce{CO2} into the atmosphere, General Circulation Models (GCMs) can be employed. These model the various processes that make up the Earth's dynamic behaviour such as the movements of the atmosphere or the oceans. They typically model these processes using a grid that spans the surface of the Earth, with variables such as temperature and pressure represented at each grid cell. The first GCMs just modelled the atmosphere (TODO: cite), but as they have developed they have gone on to encompass more of the Earth's systems, such as the oceans, the cryosphere and the biosphere. Indeed, certain large scale climatic modes such as the El ni{\~n}o Southern Oscillation (ENSO) can only be adequately modelled when the coupling between the atmosphere and the ocean is included (TODO: cite Neelin + others?). 
+To study the release of \ce{CO2} into the atmosphere, General Circulation Models (GCMs) can be employed. These model the various processes that make up the Earth's dynamic behaviour such as the movements of the atmosphere or the oceans. They typically model these processes using a grid that spans the surface of the Earth, with variables such as temperature and pressure represented at each grid cell. Early GCMs just modelled the atmosphere \parencite{holloway1971simulation}, but as they have developed they have gone on to encompass more of the Earth's systems, such as the oceans, the cryosphere and the biosphere. Indeed, certain large scale climatic modes such as the El ni{\~n}o Southern Oscillation (ENSO) can only be adequately modelled when the coupling between the atmosphere and the ocean is included \parencite{neelin2011climate}. 
 
-As well as modelling more of the Earth's systems, GCMs have also increased in resolution allowing smaller scale phenomena to be modelled. However, there are processes that occur on a scale smaller than the grid size of the models, and to include these processes they must be parameterised. That is, although the process is not modelled explicitly, it is included in the model by use of a parameter which describes its overall behaviour on the scale of the grid cell. Examples of this are cloud microphysics (TODO: check/cite) and atmospheric turbulence (TODO: check/cite).
+As well as modelling more of the Earth's systems, GCMs have also increased in resolution allowing smaller scale phenomena to be modelled. However, there are processes that occur on a scale smaller than the grid size of the models, and to include these processes they must be parameterised. That is, although the process is not modelled explicitly, it is included in the model by use of a parameter which describes its overall behaviour on the scale of the grid cell. An example of this are the parameterisation of cloud microphysics \parencite{walko1995new, neelin2011climate}.
 
 \subsection{Radiative forcing and feedbacks}
 % Talk about Radiative Forcing and feedbacks.
@@ -112,43 +113,46 @@ The land surface scheme is provided by the Met Office Surface Exchange Scheme (M
 
 \subsection{Scenarios}
 
-Three scenarios are considered in this study: control, instantaneous doubling of \ce{CO2} (2x\ce{CO2}) and 1\% rise in \ce{CO2} per year (1\%py). The \ce{CO2} concentration for the control scenario is XXXppm, and YYYppm for the 2x\ce{CO2} and 1\%py scenarios. A concentration of XXXppm corresponds to 199X from the Keeling Curve. HadAM3 does not directly model the ocean, instead the Sea Surface Temperature (SST) was prescribed for all scenarios. The control and 2x\ce{CO2} scenarios were both prescribed with a SST temperature from a climate of 199X. For the 1\%py scenario, HadCM3 was run for \SI{80}{years} with \ce{CO2} levels increasing at 1\% per year, and the SST from this model from years 60-80 was taken as the SST for the 1\%py scenario. It should be noted that a 1\% increase year on year will lead to a doubling after \SI{69.7}{years}.
+Three scenarios are considered in this study: control, instantaneous doubling of \ce{CO2} (2x\ce{CO2}) and 1\% rise in \ce{CO2} per year (1\%/yr). The \ce{CO2} concentration for the control scenario is XXXppm, and YYYppm for the 2x\ce{CO2} and 1\%/yr scenarios. A concentration of XXXppm corresponds to 199X from the Keeling Curve. HadAM3 does not directly model the ocean, instead the Sea Surface Temperature (SST) was prescribed for all scenarios. The control and 2x\ce{CO2} scenarios were both prescribed with a SST temperature from a climate of 199X. For the 1\%/yr scenario, HadCM3 was run for \SI{80}{years} with \ce{CO2} levels increasing at 1\% per year, and the SST from this model from years 60-80 was taken as the SST for the 1\%/yr scenario. It should be noted that a 1\% increase year on year will lead to a doubling after \SI{69.7}{years}.
 
 \newpage
 \section{Results}
 
 \subsection{Calculation of TCR and $CS_{\ce{CO2}}$}
 
-\subsection{Global changes between 1\%py and control scenarios}
+\subsection{Global changes between 1\%/yr and control scenarios}
 
-Discussion about Figure \ref{fig:global_temp_precip} to go here.
 % Points to mention:
 % Temp: Highest over Arctic + strongest effect seen in winter. Warning over Antarctic in its winter is far less pronounced.
 % only some areas cool at all
 
 % Precip: very different spatial pattern to temp, interesting effect either side of eq. , plus large red. over amazonia DJF visible. Strongest effect in Nov.. 
+Figure \ref{fig:global_temp_precip} top-left shows the difference between the 1\%/yr and control scenarios for surface temperature averaged over the year. From this map it is clear that the 1\%/yr scenario is the same temperature or hotter across almost the whole globe. There is only a small area in the Southern Ocean (centred on 60\textdegree S, 120\textdegree E) where the 1\%/yr scenario is cooler. This reflects the value of TCR of \SI{2}{K} found in the previous section. It is also clear from this map that the Arctic shows by far the biggest difference, and this difference is only increased when looking at the northern hemisphere winter December-February (DJF) map, where the difference between the scenarios can reach \SI{20}{K}. However the similar southern hemisphere winter map shows that warming over the Antarctic is far less pronounced. The seasonal dependence of the warming magnitude can be seen in the ``Seasonal mean temperature'' graph, where warming can be seen to be greatest from September to January. The ``Zonal mean temperature'' graph confirms that the heating happens predominantly over the Arctic, with warming being far larger at latitudes higher than 60\textdegree N.
+
+The difference in precipitation between the two scenarios shows a different spatial pattern. In the ``Annual'' map, the main increases can be seen to happen over the Pacific Atlantic and Indian Oceans, just north of the Equator. In the Indian Ocean, there is another area of large increase that can be seen just south of the Equator, and this can be seen as a prominent feature in the ``DJF'' map. The main areas of precipitation reduction are the eastern Pacific Ocean, and over northern Brazil. The reduction over northern Brazil is most prominent in the ``DJF'' map, suggesting a seasonal dependence in this reduction. The ``Seasonal mean precip.'' graph shows a strong increase in November. The ``Zonal mean precip.'' graph shows an increase just north of the Equator, and a corresponding decrease just south of the Equator. There is a broad increase around 50°S as well.
+% TODO: Explain!
 
 
 
 \begin{figure}[hbp]
     \centering
     \includegraphics[width=\textwidth]{figures/global_temp_precip}
-    \caption{Global annual, December-February (DJF) and June-August (JJA) maps of the difference between the 1\%py and control scenarios for surface temperature and precipitation (top three left and right). Seasonal and zonal mean differences between the 1\% and control scenarios for temperature and precipitation (bottom two left and right).}
+    \caption{Global annual, December-February (DJF) and June-August (JJA) maps of the difference between the 1\%/yr and control scenarios for surface temperature and precipitation (top three left and right). Seasonal and zonal mean differences between the 1\% and control scenarios for temperature and precipitation (bottom two left and right).}
     \label{fig:global_temp_precip}
 \end{figure}
 
 \newpage
 \subsection{Seasonal changes in South America}
 
-Discussion about Figure \ref{fig:sa_seasonal} to go here.
 % Points to mention:
 % precip: Large reduction over amazon in DJF. How this compares to IPCC.
 % Large increase over Amazon/North coast of Brazil across the year. Signs of correlation.
+From Figure \ref{fig:sa_seasonal}, DJF $\Delta$ Precip. (top left), the same reduction in precipitation over the mouth of the Amazon in northern Brazil that was mentioned in the previous section is clearly visible. This reduction persists across the course of the year (as confirmed in Figure \ref{fig:sa_diff}, top left), although it is most pronounced in DJF. When looking at the change in surface temperature over the same region, the whole of the continent is seen so undergo substantial heating. The average temperature increase over the land is \SI{3.4}{K}. The heating is, again, most prominent over northern Brazil, at the mouth of the Amazon.
 
 \begin{figure}[hbp]
     \centering
     \includegraphics[width=\textwidth]{figures/sa_seasonal}
-    \caption{Seasonal variation of the difference between the 1\%py and control scenarios for precipitation and surface temperature for South America.}
+    \caption{Seasonal variation of the difference between the 1\%/yr and control scenarios for precipitation and surface temperature for South America.}
     \label{fig:sa_seasonal}
 \end{figure}
 
@@ -156,14 +160,14 @@ Discussion about Figure \ref{fig:sa_seasonal} to go here.
 
 \subsection{Interdependence of variables in South America}
 
-Discussion about Figure \ref{fig:sa_diff} to go here.
 % Points to mention:
 % Area most affected for 4/5 seems to be north coast of Br., signs of correlation between these 5 variables. 
+In the five variables shown in Figure \ref{fig:sa_diff}, three show a broad continental increase between the 1\%/yr and control scenarios: surface temperature, humidity and NPP. Conversely, precipitation and soil moisture both show decreases over the continent. What is interesting is that each of the variables shows an increase or decrease over the head of the Amazon, which hints at these variables' interdependence on each other. That some these variables should be linked is not surprising: it makes sense \textit{a priori} that if e.g. precipitation goes up between the two scenarios, soil moisture should go up as well. 
 
 \begin{figure}[hbp]
     \centering
     \includegraphics[width=\textwidth]{figures/sa_diff}
-    \caption{Annual mean of the difference between the 1\%py and control scenarios for precipitation, surface temperature, humidity, NPP, and soil moisture for South America.}
+    \caption{Annual mean of the difference between the 1\%/yr and control scenarios for precipitation, surface temperature, humidity, NPP, and soil moisture for South America.}
     \label{fig:sa_diff}
 \end{figure}
 
@@ -171,12 +175,12 @@ Discussion about Figure \ref{fig:sa_diff} to go here.
 
 % Points to mention:
 % Most plots show some amount of correlation (apart from humidity/surf temp.). Implies an interdependency between these variables. explain plausible mechanism for some of these interdependencies. 
+This interdependence is examined further in Figure \ref{fig:corr}, which plots the difference of each of the variables between the 1\%/yr and control scenarios against every other variable's difference, showing Pearson's correlation statistic for each pair. This shows that when e.g. there is a strong correlation between the increase in precipitation and the increase in soil moisture between the two scenarios. 
 
-Paragraph about Figure \ref{fig:corr} plots.
 \begin{figure}[hbp]
     \centering
     \includegraphics[width=\textwidth]{figures/corr}
-    \caption{Scatter plots of the difference between the 1\%py and control scenarios for precipitation, surface temperature, humidity, NPP, and soil moisture for South America. Each pair of variables is represented once. Pearson's r value is shown. For all graphs apart from humidity-surface temperature $p < 0.001$, for humidity-surface temperature $p = 0.034$. }
+    \caption{Scatter plots of the difference between the 1\%/yr and control scenarios for precipitation, surface temperature, humidity, NPP, and soil moisture for South America. Each pair of variables is represented once. Pearson's r value is shown. For all graphs apart from humidity-surface temperature $p < 0.001$, for humidity-surface temperature $p = 0.034$. }
     \label{fig:corr}
 \end{figure}
 
