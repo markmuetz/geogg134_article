@@ -70,7 +70,7 @@
 
 \section*{Abstract}
 
-From an initial starting point of \SI{346}{ppm} of \ce{CO2}, HadAM3 is used to model three different scenarios: control, instantaneous doubling of \ce{CO2} and a 1\% rise in \ce{CO2} for 70 years. From these scenarios, the Transient Climate Response (TCR) and climate sensitivity to \ce{CO2} ($CS_{\ce{CO2}}$) are calculated, finding values of $TCR = \SI{2.0}{K}$ and $CS_{\ce{CO2}} = \SI{2.9}{W.m^{-2}.K^{-1}}$. The temperature differences across the globe between the control scenario and the 1\% rise scenario are analysed. The seasonal variation of precipitation and surface temperature over South America are discussed, and compared to the regional section of IPCC AR5 WG I \parencite{ipcc2014wg1}. The local changes over South America of the variables precipitation, surface temperature, Net Primary Productivity (NPP), humidity and soil moisture are analysed in detail. The interdependence of these variables is discussed, as well as looking into the reasons for this interdependence.
+From an initial starting point of \SI{346}{ppm} of \ce{CO2}, HadAM3 is used to model three different scenarios: control, instantaneous doubling of \ce{CO2} and a 1\% rise in \ce{CO2} for 70 years. From these scenarios, the Transient Climate Response (TCR) and effective climate sensitivity to \ce{CO2} ($\Delta T^{eff}_{\ce{CO2}}$, ) are calculated, finding values of $TCR = \SI{2.0}{K}$ and $\Delta T^{eff}_{\ce{CO2}} = \SI{2.9}{K}$. The temperature differences across the globe between the control scenario and the 1\% rise scenario are analysed. The seasonal variation of precipitation and surface temperature over South America are discussed, and compared to the regional section of IPCC AR5 WG I \parencite{ipcc2014wg1}. The local changes over South America of the variables precipitation, surface temperature, Net Primary Productivity (NPP), humidity and soil moisture are analysed in detail. The interdependence of these variables is discussed, as well as looking into the reasons for this interdependence.
 
 \section{Introduction}
 
@@ -93,13 +93,13 @@ A climate feedback is a response to e.g. an increase in temperature that can eit
 % Talk about regional effects and why they're important.
 \subsection{Regional effects of increased \ce{CO2}}
 % experienced at a regional level.
-A \SI{2}{K} rise in global surface temperatures cannot be directly experienced by humans; it is on a regional scale that humans will be affected. It is therefore important that the regional effects of increased \ce{CO2} are understood, so as plans can be put in place to mitigate the worst of these effects and changes can be made ahead of time to adapt to the changing environment. The predicted regional effects over South America are detailed in AR5 (TODO: cite). Two findings from that report will be examined using the HadAM3 model:
+A \SI{2}{K} rise in global surface temperatures cannot be directly experienced by humans; it is on a regional scale that humans will be affected. It is therefore important that the regional effects of increased \ce{CO2} are understood, so as plans can be put in place to mitigate the worst of these effects and changes can be made ahead of time to adapt to the changing environment. The predicted regional effects over South America are detailed in IPCC AR5 WG I \parencite{ipcc2014wg1}. Two findings from that report will be examined using the HadAM3 model:
 \begin{itemize}
     \item ``it is \textit{very likely} temperatures will increase over the whole continent, with greatest warming projected in southern Amazonia.''
     \item ``It is very likely that less rainfall will occur in eastern Amazonia, northeast and eastern Brazil during the dry season. However, in the rainy season there is medium confidence in the precipitation changes over these regions.''
 \end{itemize}
 
-The variables within a GCM are interdependent: the precipitation in one year can affect the NPP the next year, which can affect the amount of transpiration, leading to changes in atmospheric water vapour and changes in precipitation. The role of these dependencies will be analysed in the context of South America, where a details consideration of five of these variables is possible as it is large enough to show spatial variation, but small enough (and geographically disconnected) to be considered as an entity.
+The variables within a GCM are interdependent: the precipitation in one year can affect the NPP the next year, which can affect the amount of transpiration, leading to changes in atmospheric water vapour and changes in precipitation. The role of these dependencies will be analysed in the context of South America, where a details consideration of five of these variables is possible as it is large enough to show spatial variation, but small enough (and geographically disconnected) to be considered as a discrete entity.
 
 
 \section{Methods}
@@ -113,12 +113,30 @@ The land surface scheme is provided by the Met Office Surface Exchange Scheme (M
 
 \subsection{Scenarios}
 
-Three scenarios are considered in this study: control, instantaneous doubling of \ce{CO2} (2x\ce{CO2}) and 1\% rise in \ce{CO2} per year (1\%/yr). The \ce{CO2} concentration for the control scenario is XXXppm, and YYYppm for the 2x\ce{CO2} and 1\%/yr scenarios. A concentration of XXXppm corresponds to 199X from the Keeling Curve. HadAM3 does not directly model the ocean, instead the Sea Surface Temperature (SST) was prescribed for all scenarios. The control and 2x\ce{CO2} scenarios were both prescribed with a SST temperature from a climate of 199X. For the 1\%/yr scenario, HadCM3 was run for \SI{80}{years} with \ce{CO2} levels increasing at 1\% per year, and the SST from this model from years 60-80 was taken as the SST for the 1\%/yr scenario. It should be noted that a 1\% increase year on year will lead to a doubling after \SI{69.7}{years}.
+Three scenarios are considered in this study: control, instantaneous doubling of \ce{CO2} (2x\ce{CO2}) and 1\% rise in \ce{CO2} per year (1\%/yr). The \ce{CO2} concentration for the control scenario is \SI{374}, and \SI{748} for the 2x\ce{CO2} and 1\%/yr scenarios. A concentration of \SI{374} corresponds to approximately 2005 from the Keeling Curve \parencite{keeling1976atmospheric}. HadAM3 does not directly model the ocean, instead the Sea Surface Temperature (SST) was prescribed for all scenarios. The control and 2x\ce{CO2} scenarios were both prescribed with a SST temperature from a climate of 199X. For the 1\%/yr scenario, HadCM3 was run for \SI{80}{years} with \ce{CO2} levels increasing at 1\% per year, and the SST from this model from years 60-80 was taken as the SST for the 1\%/yr scenario. It should be noted that a 1\% increase year on year will lead to a doubling after \SI{69.7}{years}.
 
 \newpage
 \section{Results}
 
-\subsection{Calculation of TCR and $CS_{\ce{CO2}}$}
+\subsection{Calculation of TCR and $\Delta T_{\ce{CO2}}$}
+
+Once three scenarios (control, 1\%/yr and 2x\ce{CO2}) have been run, some global statistics can be calculated that are useful when comparing the results of different models. The first of these is the TCR, which is the difference in global mean temperature between the 1\%/yr and the control scenarios. The calculated value for HadAM3 in this study is TCR = \SI{2.0}{K}. This is in agreement with IPCC AR5 WG I \parencite{ipcc2014wg1}, which finds that the range is 1.0 to \SI{2.5}{K}.
+
+Another useful parameter in comparing the size of response for different models is the climate sensitivity due to \ce{CO2} ($\Delta T_{\ce{CO2}}$), or the surface temperature change that you would see if you doubled \ce{CO2} concentration and let the Earth reach a new equilibrium. Following method B of \textcite{gregory2004new}, the ``effective climate sensitivity'', $\Delta T^{eff}_{\ce{CO2}}$, can be calculated from the TCR and two flux imbalances, one from each of the 2x\ce{CO2} and 1\%/yr scenarios. If the imposed forcing of doubling \ce{CO2} is $F$, and the net forcing after a given time is $N$, then the climate feedback parameter $\alpha$ can be calculated using:
+
+\begin{equation}
+    \alpha = \frac{(F - N)}{\Delta T}
+    \label{eqn:alpha}
+\end{equation}
+
+Here $\Delta T$ is the TCR already calculated, $F$ is calculated from the 2x\ce{CO2} scenario by taking the difference of the net top of atmosphere flux between the scenario and the control scenario. Similarly, $N$ is calculated from the 1\%/yr scenario, which leads to values of $F = \SI{3.71}{W.m^{-2}}$, and $N = \SI{1.05}{W.m^{-2}}$. This gives $\alpha = \SI{1.30}{W.m^{-2}.K^{-1}}$. Finally, the equation for climate sensitivity is:
+
+\begin{equation}
+    \Delta T^{eff}_{\ce{CO2}} = \frac{F}{\alpha}
+    \label{eqn:delta_t}
+\end{equation}
+
+Using this equation with the above number yields $\Delta T^{eff}_{\ce{CO2}} = \SI{2.85}{K}$. This is in reasonable agreement with the range found in IPCC AR5 WG I, which gives the range as 1.5 to \SI{4.5}{K} \parencite{ipcc2014wg1}.
 
 \subsection{Global changes between 1\%/yr and control scenarios}
 
@@ -185,6 +203,7 @@ This interdependence is examined further in Figure \ref{fig:corr}, which plots t
 \end{figure}
 
 \newpage
+
 \section{Discussion}
 
 \section{Conclusions}
@@ -205,7 +224,7 @@ N.B. more decimal points quoted than required for detailed numerical comparison.
     \item \textbf{$G_{2x\ce{CO2}}$}: \SI{3.71}{W.m^{-2}}
     \item \textbf{global annual average surface net flux in control}: \SI{10.102}{W.m^{-2}}
     \item \textbf{Transient Climate Response (TCR)}: \SI{2.044}{K}
-    \item \textbf{$\Delta T^{eff}_{2x\ce{CO2}}$}: \SI{2.85}{W.m^{-2}.K^{-1}}
+    \item \textbf{$\Delta T^{eff}_{2x\ce{CO2}}$}: \SI{2.85}{K}
     \item \textbf{RMS surface temperature bias in DJF from control}: \SI{3.943}{K} % TODO: not sure about this one at all.
 \end{enumerate}
 
