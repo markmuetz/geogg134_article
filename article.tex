@@ -63,10 +63,6 @@
 % RCP_Guide
 % SREX-Ch3-Supplement_FINAL
 
-\newif\ifsubsection
-\subsectiontrue
-%\subsectionfalse
-
 \begin{document}
 
 \part*{Using HadAM3 to model global and regional effects of increased atmospheric \ce{CO2}}
@@ -80,17 +76,13 @@ From an initial starting point of XXXppm of \ce{CO2}, HadAM3 is used to model th
 % Layout the groundwork for why studying CO2 is important:
 Since 1958 the level of \ce{CO2} in the atmosphere has been monitored at the Mauna Loa observatory in Hawaii (TODO: cite). Its current level now stands at \SI{401}{ppm} (April, 2014), having increased from a value of \SI{315}{ppm} since 1958, which was already over the maximum value of \ce{CO2} that the Earth had seen for the previous \SI{800 000}{years} (TODO: cite). It is a well mixed gas, so its value at on location is indicative of its value across the globe, although there are regional variations (TODO: cite). It is a Greenhouse Gas (GHG), meaning that it is mostly transparent to the short-wave radiation incident on the Earth from the Sun, but opaque to the outgoing long-wave radiation, which has the effect of heating up the Earth's surface (TODO: cite Neelin). It is ``very likely'' that it is responsible for the recent global rise in temperatures (TODO: cite: IPCC), which in turn are predicted to lead to increased intensity of tropical cyclones (TODO: cite), droughts (TODO: cite) and extreme precipitation events (TODO: cite). It is therefore of vital importance that its effect on the Earth's climate is studied, so as the consequences of releasing more \ce{CO2} into the atmosphere can be predicted without performing the actual experiment.
 
-\ifsubsection
 \subsection{General Circulation Models}
-\fi
 % Explain GCMs.
 To study the release of \ce{CO2} into the atmosphere, General Circulation Models (GCMs) can be employed. These model the various processes that make up the Earth's dynamic behaviour such as the movements of the atmosphere or the oceans. They typically model these processes using a grid that spans the surface of the Earth, with variables such as temperature and pressure represented at each grid cell. The first GCMs just modelled the atmosphere (TODO: cite), but as they have developed they have gone on to encompass more of the Earth's systems, such as the oceans, the cryosphere and the biosphere. Indeed, certain large scale climatic modes such as the El ni{\~n}o Southern Oscillation (ENSO) can only be adequately modelled when the coupling between the atmosphere and the ocean is included (TODO: cite Neelin + others?). 
 
 As well as modelling more of the Earth's systems, GCMs have also increased in resolution allowing smaller scale phenomena to be modelled. However, there are processes that occur on a scale smaller than the grid size of the models, and to include these processes they must be parameterised. That is, although the process is not modelled explicitly, it is included in the model by use of a parameter which describes its overall behaviour on the scale of the grid cell. Examples of this are cloud microphysics (TODO: check/cite) and atmospheric turbulence (TODO: check/cite).
 
-\ifsubsection
 \subsection{Radiative forcing and feedbacks}
-\fi
 % Talk about Radiative Forcing and feedbacks.
 % As \ce{CO2} increases, the incoming short-wave radiation reaching the Earth's surface is largely unaffected. However, more of the outgoing long-wave radiation emitted by the surface is absorbed by the atmosphere, which leads to the atmosphere heating up. As it heats, it too emits more long-wave radiation, but it does so isotropically, so an equal amount of this radiation is directed back towards the Earth's surface as well as into space. 
 Any imbalance between the net incoming short-wave solar radiation and the net outgoing long-wave radiation from the Earth is know as a Radiative Forcing (RF), which is measure in \SI{}{W.m^{-2}}. A positive RF will tend to increase the temperature of the planet, whereas a negative one will decrease it. As the amount of \ce{CO2} in the increases, it absorbs more of the outgoing long-wave radiation, which leads to a RF. Similar RFs can be defined for other GHGs such as Methane.
@@ -98,9 +90,7 @@ Any imbalance between the net incoming short-wave solar radiation and the net ou
 A climate feedback is a response to e.g. an increase in temperature that can either act to further increase the temperature (positive feedback) or decrease the temperature (negative feedback). One example of a climate feedback it snow albedo, which acts as a negative feedback. The mechanism for this is simple, as temperatures decrease, more snow can form, which increases the albedo of the surface, leading to more reflected radiation and a further drop in temperature (vice-versa for an increase). The most significant of these feedbacks it the water vapour feedback, which is a net positive feedback (TODO: cite).
 
 % Talk about regional effects and why they're important.
-\ifsubsection
 \subsection{Regional effects of increased \ce{CO2}}
-\fi
 % experienced at a regional level.
 A \SI{2}{K} rise in global surface temperatures cannot be directly experienced by humans; it is on a regional scale that humans will be affected. It is therefore important that the regional effects of increased \ce{CO2} are understood, so as plans can be put in place to mitigate the worst of these effects and changes can be made ahead of time to adapt to the changing environment. The predicted regional effects over South America are detailed in AR5 (TODO: cite). Two findings from that report will be examined using the HadAM3 model:
 \begin{itemize}
@@ -124,7 +114,14 @@ The land surface scheme is provided by the Met Office Surface Exchange Scheme (M
 
 Three scenarios are considered in this study: control, instantaneous doubling of \ce{CO2} (2x\ce{CO2}) and 1\% rise in \ce{CO2} per year (1\%py). The \ce{CO2} concentration for the control scenario is XXXppm, and YYYppm for the 2x\ce{CO2} and 1\%py scenarios. A concentration of XXXppm corresponds to 199X from the Keeling Curve. HadAM3 does not directly model the ocean, instead the Sea Surface Temperature (SST) was prescribed for all scenarios. The control and 2x\ce{CO2} scenarios were both prescribed with a SST temperature from a climate of 199X. For the 1\%py scenario, HadCM3 was run for \SI{80}{years} with \ce{CO2} levels increasing at 1\% per year, and the SST from this model from years 60-80 was taken as the SST for the 1\%py scenario. It should be noted that a 1\% increase year on year will lead to a doubling after \SI{69.7}{years}.
 
+\newpage
 \section{Results}
+
+\subsection{Calculation of TCR and $CS_{\ce{CO2}}$}
+
+\subsection{Global changes between 1\%py and control scenarios}
+
+Discussion about Figure \ref{fig:global_temp_precip} to go here.
 
 \begin{figure}[hbp]
     \centering
@@ -133,12 +130,22 @@ Three scenarios are considered in this study: control, instantaneous doubling of
     \label{fig:global_temp_precip}
 \end{figure}
 
+\newpage
+\subsection{Seasonal changes in South America}
+
+Discussion about Figure \ref{fig:sa_seasonal} to go here.
+
 \begin{figure}[hbp]
     \centering
     \includegraphics[width=\textwidth]{figures/sa_seasonal}
     \caption{Caption.}
     \label{fig:sa_seasonal}
 \end{figure}
+
+\newpage
+\subsection{Interdependence of variables in South America}
+
+Discussion about Figure \ref{fig:sa_diff} to go here.
 
 \begin{figure}[hbp]
     \centering
@@ -147,6 +154,9 @@ Three scenarios are considered in this study: control, instantaneous doubling of
     \label{fig:sa_diff}
 \end{figure}
 
+\newpage
+
+Paragraph about Figure \ref{fig:corr} plots.
 \begin{figure}[hbp]
     \centering
     \includegraphics[width=\textwidth]{figures/corr}
@@ -154,6 +164,7 @@ Three scenarios are considered in this study: control, instantaneous doubling of
     \label{fig:corr}
 \end{figure}
 
+\newpage
 \section{Discussion}
 
 \section{Conclusions}
