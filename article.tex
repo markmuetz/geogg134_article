@@ -78,7 +78,7 @@ From an initial starting point of XXXppm of \ce{CO2}, HadAM3 is used to model th
 \section{Introduction}
 
 % Layout the groundwork for why studying CO2 is important:
-Since 1958 the level of \ce{CO2} in the atmosphere has been monitored at the Mauna Loa observatory in Hawaii (TODO: cite). Its current level now stands at \SI{401}{ppm} (April, 2014), having increased from a value of \SI{315}{ppm} since 1958, which was already over the maximum value of \ce{CO2} that the Earth had seen for the previous \SI{800 000}{years} (TODO: cite). It is a well mixed gas, so its value at on location is indicative of its value across the globe, although there are regional variations (TODO: cite). It is a Greenhouse Gas (GHG), meaning that it is transparent to the majority of short-wave radiation incident on the Earth from the Sun, but opaque to the outgoing long-wave radiation, which has the effect of heating up the Earth's surface (TODO: cite Neelin). It is ``very likely'' that it is responsible for the recent global rise in temperatures (TODO: cite: IPCC), which in turn are predicted to lead to increased intensity of tropical cyclones (TODO: cite), droughts (TODO: cite) and extreme precipitation events (TODO: cite). It is therefore of vital importance that its effect on the Earth's climate is studied, so as the consequences of releasing more \ce{CO2} into the atmosphere can be predicted without performing the actual experiment.
+Since 1958 the level of \ce{CO2} in the atmosphere has been monitored at the Mauna Loa observatory in Hawaii (TODO: cite). Its current level now stands at \SI{401}{ppm} (April, 2014), having increased from a value of \SI{315}{ppm} since 1958, which was already over the maximum value of \ce{CO2} that the Earth had seen for the previous \SI{800 000}{years} (TODO: cite). It is a well mixed gas, so its value at on location is indicative of its value across the globe, although there are regional variations (TODO: cite). It is a Greenhouse Gas (GHG), meaning that it is mostly transparent to the short-wave radiation incident on the Earth from the Sun, but opaque to the outgoing long-wave radiation, which has the effect of heating up the Earth's surface (TODO: cite Neelin). It is ``very likely'' that it is responsible for the recent global rise in temperatures (TODO: cite: IPCC), which in turn are predicted to lead to increased intensity of tropical cyclones (TODO: cite), droughts (TODO: cite) and extreme precipitation events (TODO: cite). It is therefore of vital importance that its effect on the Earth's climate is studied, so as the consequences of releasing more \ce{CO2} into the atmosphere can be predicted without performing the actual experiment.
 
 \ifsubsection
 \subsection{General Circulation Models}
@@ -125,6 +125,27 @@ The land surface scheme is provided by the Met Office Surface Exchange Scheme (M
 Three scenarios are considered in this study: control, instantaneous doubling of \ce{CO2} (2x\ce{CO2}) and 1\% rise in \ce{CO2} per year (1\%py). The \ce{CO2} concentration for the control scenario is XXXppm, and YYYppm for the 2x\ce{CO2} and 1\%py scenarios. A concentration of XXXppm corresponds to 199X from the Keeling Curve. HadAM3 does not directly model the ocean, instead the Sea Surface Temperature (SST) was prescribed for all scenarios. The control and 2x\ce{CO2} scenarios were both prescribed with a SST temperature from a climate of 199X. For the 1\%py scenario, HadCM3 was run for \SI{80}{years} with \ce{CO2} levels increasing at 1\% per year, and the SST from this model from years 60-80 was taken as the SST for the 1\%py scenario. It should be noted that a 1\% increase year on year will lead to a doubling after \SI{69.7}{years}.
 
 \section{Results}
+
+\begin{figure}[hbp]
+    \centering
+    \includegraphics[width=\textwidth]{figures/global_temp_precip}
+    \caption{Caption.}
+    \label{fig:global_temp_precip}
+\end{figure}
+
+\begin{figure}[hbp]
+    \centering
+    \includegraphics[width=\textwidth]{figures/sa_seasonal}
+    \caption{Caption.}
+    \label{fig:sa_seasonal}
+\end{figure}
+
+\begin{figure}[hbp]
+    \centering
+    \includegraphics[width=\textwidth]{figures/sa_diff}
+    \caption{Caption.}
+    \label{fig:sa_diff}
+\end{figure}
 
 \begin{figure}[hbp]
     \centering
