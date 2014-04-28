@@ -19,7 +19,7 @@
 \renewcommand{\headrulewidth}{0pt}
 
 \lhead{}
-\chead{BTTM8 - CLIMATE MODELLING - USING HADAM3 TO MODEL CLIMATE CHANGE}
+\chead{}
 \rhead{}
 %\lfoot{}
 %\cfoot{}
@@ -66,6 +66,31 @@
 
 \begin{document}
 
+
+\textbf{UCL DEPARTMENT OF GEOGRAPHY}\\[4cm]
+
+\LARGE
+
+\textbf{EXAM CANDIDATE ID:} BTTM8
+
+\textbf{DEPARTMENT/COLLEGE:} Department of Geography
+
+\textbf{MODULE CODE:} GEOGG134
+
+\textbf{MODULE TITLE:} Climate Modelling
+
+\textbf{COURSE PAPER TITLE:} Using HadAM3 to model global and regional effects of increased atmospheric \ce{CO2} \\[3cm]
+
+\textbf{NAME OF ACADEMIC TUTOR:} Chris Brierley
+
+\textbf{WORD COUNT:} 2448
+
+\normalsize
+
+\newpage
+
+\chead{BTTM8 - CLIMATE MODELLING - USING HADAM3 TO MODEL CLIMATE CHANGE}
+
 \part*{Using HadAM3 to model global and regional effects of increased atmospheric \ce{CO2}}
 
 \section*{Abstract}
@@ -85,7 +110,7 @@ As well as modelling more of the Earth's systems, GCMs have also increased in re
 
 \subsection{Radiative forcing}
 % Talk about Radiative Forcing / no longer! and feedbacks.
-Any imbalance between the net incoming short-wave solar radiation and the net outgoing long-wave radiation from the Earth is know as a Radiative Forcing (RF), which is measure in \SI{}{W.m^{-2}}. A positive RF will tend to increase the temperature of the planet, whereas a negative one will decrease it. As the amount of \ce{CO2} in the atmosphere increases, it absorbs more of the outgoing long-wave radiation, which leads to a RF. Similar RFs can be defined for other GHGs such as Methane.
+Any imbalance between the net incoming short-wave solar radiation and the net outgoing long-wave radiation from the Earth is know as a Radiative Forcing (RF), which is measured in \SI{}{W.m^{-2}}. A positive RF will tend to increase the temperature of the planet, whereas a negative one will decrease it. As the amount of \ce{CO2} in the atmosphere increases, it absorbs more of the outgoing long-wave radiation, which leads to a RF. Similar RFs can be defined for other GHGs such as Methane.
 
 %A climate feedback is a response to e.g. an increase in temperature that can either act to further increase the temperature (positive feedback) or decrease the temperature (negative feedback). One example of a climate feedback is snow albedo, which acts as a negative feedback. The mechanism for this is simple: as temperatures decrease, more snow can form, which increases the albedo of the surface, leading to more reflected radiation and a further drop in temperature (vice-versa for an increase). The most significant of these feedbacks it the water vapour feedback, which is a net positive feedback.
 
@@ -107,7 +132,7 @@ The land surface scheme is provided by the Met Office Surface Exchange Scheme (M
 
 \subsection{Scenarios}
 
-Three scenarios are considered in this study: control, instantaneous doubling of \ce{CO2} (2x\ce{CO2}) and 1\% rise in \ce{CO2} per year (1\%/yr). The \ce{CO2} concentration for the control scenario is \SI{374}, and \SI{748} for the 2x\ce{CO2} and 1\%/yr scenarios. A concentration of \SI{374}{ppm} corresponds to approximately 2005 from the Keeling Curve \parencite{keeling1976atmospheric}. HadAM3 does not directly model the ocean, instead the Sea Surface Temperature (SST) was prescribed for all scenarios. The control and 2x\ce{CO2} scenarios were both prescribed with a SST corresponding to a contemporary climate. For the 1\%/yr scenario, HadCM3 was run for \SI{80}{years} with \ce{CO2} levels increasing at 1\% per year, and the SST from this model from years 60-80 was taken as the SST for the 1\%/yr scenario. It should be noted that a 1\% increase year on year will lead to a doubling after \SI{69.7}{years}.  Each of the runs was run for \SI{21}{years} and \SI{1}{month}.
+Three scenarios are considered in this study: control, instantaneous doubling of \ce{CO2} (2x\ce{CO2}) and 1\% rise in \ce{CO2} per year (1\%/yr). The \ce{CO2} concentration for the control scenario is \SI{374}{ppm}, and \SI{748}{ppm} for the 2x\ce{CO2} and 1\%/yr scenarios. A concentration of \SI{374}{ppm} corresponds to approximately 2005 from the Keeling Curve \parencite{keeling1976atmospheric}. HadAM3 does not directly model the ocean, instead the Sea Surface Temperature (SST) was prescribed for all scenarios. The control and 2x\ce{CO2} scenarios were both prescribed with a SST corresponding to a contemporary climate. For the 1\%/yr scenario, HadCM3 was run for \SI{80}{years} with \ce{CO2} levels increasing at 1\% per year, and the SST from this model from years 60-80 was taken as the SST for the 1\%/yr scenario. It should be noted that a 1\% increase year on year will lead to a doubling after \SI{69.7}{years}.  Each of the scenarios was run for \SI{21}{years} and \SI{1}{month}.
 
 \newpage
 \section{Results}
@@ -130,7 +155,7 @@ Here $\Delta T$ is the TCR already calculated, $F$ is calculated from the 2x\ce{
     \label{eqn:delta_t}
 \end{equation}
 
-Using this equation with the above number yields $\Delta T^{eff}_{\ce{CO2}} = \SI{2.85}{K}$. This is in reasonable agreement with the range found in IPCC AR5 WG I, which gives the range as 1.5 to \SI{4.5}{K} \parencite{ipcc2014wg1}.
+Using this equation with the above number yields $\Delta T^{eff}_{\ce{CO2}} = \SI{2.85}{K}$. This is in agreement with the range found in IPCC AR5 WG I, which gives the range as 1.5 to \SI{4.5}{K} \parencite{ipcc2014wg1}.
 
 \subsection{Global changes between 1\%/yr and control scenarios}
 
@@ -139,7 +164,7 @@ Using this equation with the above number yields $\Delta T^{eff}_{\ce{CO2}} = \S
 % only some areas cool at all
 
 % Precip: very different spatial pattern to temp, interesting effect either side of eq. , plus large red. over amazonia DJF visible. Strongest effect in Nov.. 
-Figure \ref{fig:global_temp_precip} top-left shows the difference between the 1\%/yr and control scenarios for surface temperature averaged over the year. From this map it is clear that the 1\%/yr scenario is the same temperature or hotter across almost the whole globe. There is only a small area in the Southern Ocean (centred on 60\textdegree S, 120\textdegree E) where the 1\%/yr scenario is cooler. This reflects the value of TCR of \SI{2}{K} found in the previous section. It is also clear from this map that the Arctic shows by far the biggest difference, and this difference is only increased when looking at the northern hemisphere winter December-February (DJF) map, where the difference between the scenarios can reach \SI{20}{K}. However the similar southern hemisphere winter map shows that warming over the Antarctic is far less pronounced. The seasonal dependence of the warming magnitude can be seen in the ``Seasonal mean temperature'' graph, where warming can be seen to be greatest from September to January. The ``Zonal mean temperature'' graph confirms that the heating happens predominantly over the Arctic, with warming being far larger at latitudes higher than 60\textdegree N.
+Figure \ref{fig:global_temp_precip} top-left shows the difference between the 1\%/yr and control scenarios for surface temperature averaged over the year. From this map it is clear that the 1\%/yr scenario is the same temperature or hotter across almost the whole globe. There is only a small area in the Southern Ocean (centred on 60\textdegree S, 120\textdegree E) where the 1\%/yr scenario is cooler. This reflects the value of TCR of \SI{2}{K} found in the previous section. It is also clear from this map that the Arctic shows by far the biggest difference, and this difference is only increased when looking at the northern hemisphere winter December-February (DJF) map, where the difference between the scenarios can reach over \SI{20}{K}. However the similar southern hemisphere winter map shows that warming over the Antarctic is far less pronounced. The seasonal dependence of the warming magnitude can be seen in the ``Seasonal mean temperature'' graph, where warming can be seen to be greatest from September to January. The ``Zonal mean temperature'' graph confirms that the heating happens predominantly over the Arctic, with warming being far larger at latitudes higher than 60\textdegree N.
 
 The difference in precipitation between the two scenarios shows a different spatial pattern. In the ``Annual'' map, the main increases can be seen to happen over the Pacific Atlantic and Indian Oceans, just north of the Equator. In the Indian Ocean, there is another area of large increase that can be seen just south of the Equator, and this can be seen as a prominent feature in the ``DJF'' map. The main areas of precipitation reduction are the eastern Pacific Ocean, and over northern Brazil. The reduction over northern Brazil is most prominent in the ``DJF'' map, suggesting a seasonal dependence in this reduction. The ``Seasonal mean precip.'' graph shows a strong increase in November. The ``Zonal mean precip.'' graph shows an increase just north of the Equator, and a corresponding decrease just south of the Equator. There is a broad increase around 50\textdegree S as well.
 % TODO: Explain!
@@ -198,7 +223,7 @@ In the five variables shown in Figure \ref{fig:sa_diff}, three show a broad cont
 
 % Points to mention:
 % Most plots show some amount of correlation (apart from humidity/surf temp.). Implies an interdependency between these variables. explain plausible mechanism for some of these interdependencies. 
-This interdependence is examined further in Figure \ref{fig:corr}, which plots the difference of each of the variables between the 1\%/yr and control scenarios against every other variable's difference, showing Pearson's correlation statistic for each pair. This shows that when e.g. there is a strong correlation between the increase in precipitation and the increase in soil moisture between the two scenarios. 
+This interdependence is examined further in Figure \ref{fig:corr}, which plots the difference of each of the variables between the 1\%/yr and control scenarios against every other variable's difference, showing Pearson's correlation coefficient for each pair. This shows that when e.g. there is a strong correlation between the increase in precipitation and the increase in soil moisture between the two scenarios. 
 
 \begin{figure}[hbp]
     \centering
@@ -211,7 +236,7 @@ This interdependence is examined further in Figure \ref{fig:corr}, which plots t
 
 \section{Discussion}
 
-This study has identified some correlations between variables within South America. However, all mention of causality has been carefully avoided, as there is not enough evidence to say that e.g. a decrease in precipitation has lead to a decrease in NPP in South America. A further line of enquiry could be to look for causal links between the variables that have been correlated together here. To do this, it is likely that the data would have to be analysed without taking temporal means, so as it could be established if the change in one particular variable preceeded the change in another (implying causation). Alternatively, the model itself could be modified so as certain aspects of the land surface scheme, MOSES, could be turned on or off, as is done currently for the radiation scheme currently \parencite{pope2000impact}.
+This study has identified some correlations between variables within South America. However, all mention of causality has been carefully avoided, as there is not enough evidence to say that e.g. a decrease in precipitation has lead to a decrease in NPP in South America. A further line of enquiry could be to look for causal links between the variables that have been correlated together here. To do this, it is likely that the data would have to be analysed without taking temporal means, so as it could be established if the change in one particular variable preceeded the change in another (implying causation). Alternatively, the model itself could be modified so as certain aspects of the land surface scheme, MOSES, could be turned on or off, as is currently done for the radiation scheme \parencite{pope2000impact}.
 
 \section{Conclusions}
 
